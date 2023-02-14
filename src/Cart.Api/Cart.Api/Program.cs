@@ -13,8 +13,10 @@ builder.Services.AddJwtBearer(builder.Configuration);
 
 builder.Services.AddDistributedRedisCache(options =>
 {
+
     options.Configuration = "redis";
     options.InstanceName = "cart_api";
+
 });
 
 var app = builder.Build();
